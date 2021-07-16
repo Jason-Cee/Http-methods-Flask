@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+
+        }
+        body{
+            background: linear-gradient(#fec89a, #ffd7ba, #ffe5d9, #ece4db, #d8e2dc, #e8e8e4, #f8edeb, #fae1dd, #fcd5ce, #fec5bb);
+            height:95vh;
+            width:98vw;
+            margin:20px;
+            flex-direction:row;
+        }
+        h1{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        table{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            flex-direction:row;
+            margin-top:10rem;
+            margin-left:35rem;
+            font-size:3.5rem;
+            width:40vw;
+        }
+    </style>
+</head>
+<body>
+<h1>Your Items Below</h1>
+
+<table border="1">
+  <tr>
+    <th width="30">Unit</th><th>Details</th>
+  </tr>
+  {% for x, y in result.items(): %}
+  <tr>
+    <td>{{x}}</td><td>{{y}}</td>
+
+  {%endfor%}
+</table>
+</body>
+</html>
